@@ -1,0 +1,21 @@
+<!-- amcl_launch_file.launch -->
+<launch>
+
+   <!--Start map server to provide static map 
+  <node name="map_server" pkg="map_server" type="map_server" args="$(find tutorial)/maps/5th_floor.yaml" />-->
+
+  <!-- AMCL Node -->
+  <node name="amcl" pkg="amcl" type="amcl">
+    <!-- Set the base_frame parameter -->
+    <param name="laser_scan_sensor" value="scan" />
+    <param name="base_frame_id" value="base_link" />
+   <param name="use_map_topic" value="true" />
+    <!-- Add other AMCL parameters as needed -->
+    <!-- For example, set the initial pose if known -->
+     <param name="initial_pose_x" value="0.0" />
+     <param name="initial_pose_y" value="0.0" />
+     <param name="initial_pose_a" value="0.0" />
+  </node>
+
+
+</launch>

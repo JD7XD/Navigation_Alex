@@ -1,0 +1,9 @@
+digraph G {
+"odom" -> "base_link"[label="Broadcaster: /static_tf_publisher_odom_base_link\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1701934263.001 sec old)\nBuffer length: 0.000 sec\n"];
+"map" -> "odom"[label="Broadcaster: /amcl\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1701934263.001 sec old)\nBuffer length: 0.000 sec\n"];
+"base_link" -> "velodyne"[label="Broadcaster: /static_tf_publisher_base_link_velodyne\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1701934263.001 sec old)\nBuffer length: 0.000 sec\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1701934263.001"[ shape=plaintext ] ;
+ }->"map";
+}

@@ -1,0 +1,17 @@
+<launch>
+<!--  <include file="$(find velodyne_pointcloud)/launch/VLP16_points.launch"/>-->
+
+  <node pkg="tf2_ros" type="static_transform_publisher" name="static_tf_publisher_map_odom" args="0.0 0.0 0.0 0.0 0.0 0.0 map odom" output="screen"/>
+
+  <node pkg="tf2_ros" type="static_transform_publisher" name="static_tf_publisher_odom_base_link" args="0.0 0.0 0.0 0.0 0.0 0.0 odom base_link" output="screen"/>-->
+
+  <node pkg="tf2_ros" type="static_transform_publisher" name="static_tf_publisher_base_link_velodyne" args="0.0 0.0 0.0 0.0 0.0 0.0 base_link velodyne" output="screen"/>
+
+<!--  <node pkg="hector_mapping" type="hector_mapping" name="hector_mapping_node" output="screen">
+    <param name="base_frame" value="base_link"/>
+  </node>-->
+
+<!--  <include file="$(find hub_driver)/launch/motor_drivers.launch"/>-->
+
+<!--  <node pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="teleop_twist_keyboard" output="screen"/>-->
+</launch>

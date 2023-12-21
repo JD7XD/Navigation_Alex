@@ -1,0 +1,5 @@
+<launch>
+  <node pkg="move_base" type="move_base" name="move_base" output="screen">
+    <!-- Add parameters as needed -->
+  </node>
+</launch>
