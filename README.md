@@ -4,12 +4,12 @@
 
 Complete steps For localization and navigation \n
 
-roslaunch hub_driver motor_drivers.launch \n
-roslaunch tutorial make_a_map.launch \n
-roslaunch velodyne_pointcloud VLP16_points.launch \n 
-roslaunch tutorial amcl.launch \n
-rosrun hector_mapping hector_mapping _base_frame:=base_link \n
-roslaunch navros_pkg move_base.launch \n
+roslaunch hub_driver motor_drivers.launch 
+roslaunch tutorial make_a_map.launch 
+roslaunch velodyne_pointcloud VLP16_points.launch 
+roslaunch tutorial amcl.launch 
+rosrun hector_mapping hector_mapping _base_frame:=base_link 
+roslaunch navros_pkg move_base.launch 
 
 
 rostopic pub /move_base/goal move_base_msgs/MoveBaseActionGoal ---> To publish goals
