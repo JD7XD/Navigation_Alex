@@ -13,3 +13,5 @@ roslaunch navros_pkg move_base.launch
 
 
 rostopic pub /move_base/goal move_base_msgs/MoveBaseActionGoal ---> To publish goals
+
+Navros_package is for the SLAM - simultaneous localization and mapping
